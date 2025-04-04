@@ -15,5 +15,5 @@ func AtualizandoUsuario(w http.ResponseWriter, r *http.Request) {
 	w.Write([]byte("Atualizando usuario..."))
 }
 func DeletandoUsuario(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte("Criando usuario..."))
+	w.Write([]byte("Deletando usuario..."))
 }
