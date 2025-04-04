@@ -6,11 +6,14 @@ import (
 	"net/http"
 
 	"github.com/Adenilson-Silva-Dev/Api_Dev_Book/src/config"
+	"github.com/Adenilson-Silva-Dev/Api_Dev_Book/src/db"
 	"github.com/Adenilson-Silva-Dev/Api_Dev_Book/src/routes"
 )
 
 func main() {
 
+	// abrindo conexão com o banco de dados
+	db.Conectar()
 	// Carregar as variáveis de ambiente
 	config.Carregar()
 	r := routes.Gerar()
