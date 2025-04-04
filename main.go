@@ -13,8 +13,7 @@ func main() {
 
 	// Carregar as variáveis de ambiente
 	config.Carregar()
-	fmt.Println(config.Porta)
 	r := routes.Gerar()
-	fmt.Println("Iniciando o servidor na porta 8080")
-	log.Fatal(http.ListenAndServe(":8080", r))
+	fmt.Printf("Servidor rodando na porte %d", config.Porta)
+	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%d", config.Porta), r))
 }
