@@ -17,6 +17,7 @@ func main() {
 	// Carregar as variáveis de ambiente
 	config.Carregar()
 	r := routes.Gerar()
-	fmt.Printf("Servidor rodando na porte %d", config.Porta)
+	fmt.Println(config.Porta)
+	fmt.Printf("Servidor rodando na porta: %d", config.Porta)
 	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%d", config.Porta), r))
 }
